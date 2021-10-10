@@ -11,6 +11,7 @@ using namespace std;
 char up[5][255],down[5][255];
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
+//Made by Arrick Russell Adinoto
 
 void BOOST(){
     ios_base::sync_with_stdio(0);
@@ -30,11 +31,11 @@ void gotoxy(int x, int y){
 
 
 void build_obstacle_up(int last){
-	for(int i=0;i<=3;i++)up[i][last]='Û';
+	for(int i=0;i<=3;i++)up[i][last]='Ã›';
 }
 
 void build_obstacle_down(int last){
-	for(int i=0;i<=3;i++)down[i][last]='Û';
+	for(int i=0;i<=3;i++)down[i][last]='Ã›';
 }
 
 void obstacle_up(int check,long long distance){
@@ -85,15 +86,15 @@ void game_over(){
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(hConsole, 6);
 	gotoxy(25,11);
-	printf("ÛÛÛÛ  ÛÛÛÛ  Û   Û  ÛÛÛÛ     ÛÛÛÛ  Û Û  ÛÛÛÛ  ÛÛÛÛ\n");
+	printf("Ã›Ã›Ã›Ã›  Ã›Ã›Ã›Ã›  Ã›   Ã›  Ã›Ã›Ã›Ã›     Ã›Ã›Ã›Ã›  Ã› Ã›  Ã›Ã›Ã›Ã›  Ã›Ã›Ã›Ã›\n");
 	gotoxy(25,12);
-	printf("Û     Û  Û  ÛÛ ÛÛ  Û        Û  Û  Û Û  Û     Û  Û\n");
+	printf("Ã›     Ã›  Ã›  Ã›Ã› Ã›Ã›  Ã›        Ã›  Ã›  Ã› Ã›  Ã›     Ã›  Ã›\n");
 	gotoxy(25,13);
-	printf("Û     ÛÛÛÛ  Û Û Û  ÛÛ       Û  Û  Û Û  ÛÛ    ÛÛÛÛ\n");
+	printf("Ã›     Ã›Ã›Ã›Ã›  Ã› Ã› Ã›  Ã›Ã›       Ã›  Ã›  Ã› Ã›  Ã›Ã›    Ã›Ã›Ã›Ã›\n");
 	gotoxy(25,14);
-	printf("Û ÛÛ  Û  Û  Û   Û  Û        Û  Û  Û Û  Û     Û Û\n");
+	printf("Ã› Ã›Ã›  Ã›  Ã›  Ã›   Ã›  Ã›        Ã›  Ã›  Ã› Ã›  Ã›     Ã› Ã›\n");
 	gotoxy(25,15);
-	printf("ÛÛÛÛ  Û  Û  Û   Û  ÛÛÛÛ     ÛÛÛÛ   Û   ÛÛÛÛ  Û  Û\n");
+	printf("Ã›Ã›Ã›Ã›  Ã›  Ã›  Ã›   Ã›  Ã›Ã›Ã›Ã›     Ã›Ã›Ã›Ã›   Ã›   Ã›Ã›Ã›Ã›  Ã›  Ã›\n");
 	SetConsoleTextAttribute(hConsole, 7);
 }
 
@@ -156,11 +157,11 @@ int main(){
 
 			SetConsoleTextAttribute(hConsole, 6);
 			gotoxy(15,1);
-			printf("ÛÛÛÛ\n");
+			printf("Ã›Ã›Ã›Ã›\n");
 			gotoxy(15,2);
-			printf("ÛÛÛÛ\n");
+			printf("Ã›Ã›Ã›Ã›\n");
 			//gotoxy(0,3);
-			//printf("ÛÛÛÛ\n");
+			//printf("Ã›Ã›Ã›Ã›\n");
 			gotoxy(0,21);
 			print_down();
 			SetConsoleTextAttribute(hConsole, 14);
@@ -169,7 +170,7 @@ int main(){
 			printf("Distance: %lld       Highscore:%lld\n",distance,highscore);
 			
 			//CEK APAKAH TERKENA OBSTACLE ATAU TIDAK
-			if(up[0][15]=='Û'||up[0][18]=='Û'){
+			if(up[0][15]=='Ã›'||up[0][18]=='Ã›'){
 				check=false;
 				//gotoxy(10,11);
 				game_over();
@@ -217,12 +218,12 @@ int main(){
 			printf("=================================================================================================\n");
 			SetConsoleTextAttribute(hConsole, 7);
 			//gotoxy(0,21);
-			//printf("ÛÛÛÛ\n");
+			//printf("Ã›Ã›Ã›Ã›\n");
 			SetConsoleTextAttribute(hConsole, 6);
 			gotoxy(15,23);
-			printf("ÛÛÛÛ\n");
+			printf("Ã›Ã›Ã›Ã›\n");
 			gotoxy(15,24);
-			printf("ÛÛÛÛ\n");
+			printf("Ã›Ã›Ã›Ã›\n");
 			
 			
 
@@ -231,7 +232,7 @@ int main(){
 			printf("Distance: %lld       Highscore:%lld\n",distance,highscore);
 			
 			//CEK APAKAH TERKENA OBSTACLE ATAU TIDAK
-			if(down[0][15]=='Û'||down[0][18]=='Û'){
+			if(down[0][15]=='Ã›'||down[0][18]=='Ã›'){
 				check=false;
 				game_over();
 				break;
